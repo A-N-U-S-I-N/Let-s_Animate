@@ -1,0 +1,128 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-image: url(./sl_072622_51930_05.jpg);
+    background-size: cover;
+}
+
+.container {
+    height: 33vh;   
+    perspective: 900px;
+    perspective-origin: bottom left;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.cube {
+    height: 100px;
+    width: 100px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 10s linear;
+}
+
+.cube:hover {
+    transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+
+}
+
+.sides {
+    height: 100%;
+    width: 100%;
+    background-color: rgb(65, 138, 221);
+    border:2px solid rgb(37, 35, 35);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    opacity: 0.7;
+    font-size: 20px;
+}
+
+.back {
+    transform: translateZ(-50px) rotateY(180deg);
+}
+
+.front {
+    transform: translateZ(50px);
+}
+
+.top {
+    transform: rotateX(90deg) translateZ(50px);
+}
+
+.bottom {
+    transform: rotateX(-90deg) translateZ(50px);
+}
+
+.left {
+    transform: rotateY(-90deg) translateZ(50px);
+}
+
+.right {
+    transform: rotateY(90deg) translateZ(50px);
+}
+span {
+    font-weight: bolder;
+    font-size: 70px;
+    letter-spacing: 3px;
+}
+
+.bl {
+    background-color: #4285f4;
+}
+
+.gr {
+    background-color: #34a853;
+}
+
+.ye {
+    background-color: #fbbc05;
+}
+
+.re {
+    background-color: #ea4335;
+}
+
+.alag {
+    font-size: 5vh;
+    color:#999999;
+}
+
+.hov {
+    animation: ver 10s infinite;
+    z-index: 5;
+    top:57vh;
+    left:37vw;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:0.5vw;
+}
+
+@keyframes ver {
+    0% {
+        opacity: 0.9;
+    }
+
+    20% {
+        opacity:0.9;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    75% {
+        opacity :0;
+    }
+
+    100% {
+        opacity: 0.9;
+    }
+}
